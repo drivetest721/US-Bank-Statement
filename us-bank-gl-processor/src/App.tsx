@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 import LandingPage from './pages/LandingPage';
-import OutputPage from './pages/OutputPage';
+import { ThemeProvider } from './context/ThemeContext';
 
 // Simple loading fallback component
 const LoadingFallback = () => (
@@ -18,14 +18,15 @@ const LoadingFallback = () => (
 
 function App() {
   return (
-    <Router>
-      <React.Suspense fallback={<LoadingFallback />}>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/output" element={<OutputPage />} />
-        </Routes>
-      </React.Suspense>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <React.Suspense fallback={<LoadingFallback />}>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+          </Routes>
+        </React.Suspense>
+      </Router>
+    </ThemeProvider>
   );
 }
 

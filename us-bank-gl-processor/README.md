@@ -6,15 +6,12 @@ A professional React application for processing US Bank statements and convertin
 
 - **Modern UI**: Professional design tailored for accounting departments
 - **Dark/Light Theme**: Toggle between dark and light themes
-- **File Upload Options**: Upload files via file path or file manager
-- **Single/Multiple File Processing**: Toggle between single and multiple file processing
-- **Excel Viewer**: View processed Excel files directly in the application
-- **Download Functionality**: Download processed Excel files
+- **Simple File Upload**: Easy file upload via file browser
+- **Download Functionality**: Download processed Excel files directly from the main page
 
 ## Pages
 
-1. **Landing Page**: Upload bank statement PDFs
-2. **Output Page**: View and download processed Excel files
+1. **Landing Page**: Upload bank statement PDFs and download processed Excel files
 
 ## Getting Started
 
@@ -52,14 +49,12 @@ us-bank-gl-processor/
 │       └── DetailedStatement_april.xlsx
 ├── src/
 │   ├── components/
-│   │   ├── ExcelViewer.tsx
 │   │   ├── FileUploader.tsx
 │   │   └── Header.tsx
 │   ├── context/
 │   │   └── ThemeContext.tsx
 │   ├── pages/
-│   │   ├── LandingPage.tsx
-│   │   └── OutputPage.tsx
+│   │   └── LandingPage.tsx
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── index.css
@@ -80,4 +75,4 @@ us-bank-gl-processor/
 ## Notes
 
 - This is a frontend-only application. No backend functionality is implemented yet.
-- For demonstration purposes, the application uses a sample Excel file (`DetailedStatement_april.xlsx`) for the output display.
+- For demonstration purposes, the application generates a sample Excel file with hardcoded data when the download button is clicked.
